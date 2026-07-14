@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+:root {
+  --background: #FCFAF6;
+  --foreground: #1E1E1E;
+  --brand-burgundy: #8A2E44;
+  --brand-gold: #C2A478;
+  --brand-alabaster: #F5F2EB;
+  --brand-border: #EBE6DD;
+}
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-brand-burgundy: var(--brand-burgundy);
+  --color-brand-gold: var(--brand-gold);
+  --color-brand-alabaster: var(--brand-alabaster);
+  --color-brand-border: var(--brand-border);
+  
+  --font-serif: var(--font-cormorant), Georgia, serif;
+  --font-sans: var(--font-jakarta), system-ui, sans-serif;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-jakarta), system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Custom utilities for premium aesthetics */
+.text-serif {
+  font-family: var(--font-cormorant), Georgia, serif;
+}
+
+.text-sans {
+  font-family: var(--font-jakarta), system-ui, sans-serif;
+}
+
+.border-fine {
+  border: 1px solid var(--brand-border);
+}
+
+.border-fine-b {
+  border-bottom: 1px solid var(--brand-border);
+}
+
+.border-fine-t {
+  border-top: 1px solid var(--brand-border);
+}
+
+/* Custom line-height and letter-spacing for elegant display text */
+.letter-spacing-wide {
+  letter-spacing: 0.15em;
+}
+
+.letter-spacing-widest {
+  letter-spacing: 0.25em;
+}
+
+/* Announcement Bar Marquee */
+@keyframes marquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 25s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+

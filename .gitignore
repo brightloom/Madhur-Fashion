@@ -1,0 +1,18 @@
+# Next.js build and dependencies
+madhur-fashion-website/node_modules/
+madhur-fashion-website/.next/
+madhur-fashion-website/out/
+madhur-fashion-website/build/
+
+# Production env files
+madhur-fashion-website/.env*.local
+
+# Debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# System files
+.DS_Store
+*.local
+Thumbs.db
